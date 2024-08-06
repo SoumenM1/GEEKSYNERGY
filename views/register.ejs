@@ -49,7 +49,11 @@
       });
 
       const result = await response.json();
-      document.getElementById('notification').innerText = result.message;
+      // document.getElementById('notification').innerText = result.message;
+      alert(result.message)
+      if (response.status === 201) {
+        window.location.href = '/login';
+      }
     });
   </script>
 </body>
